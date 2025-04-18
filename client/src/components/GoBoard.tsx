@@ -191,7 +191,8 @@ const GoBoard: React.FC = () => {
 
   const getAICommentary = async (moveData: { x: number; y: number; color: string }) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/analyze', {
+      const API_URL = import.meta.env.VITE_PRODUCTION_API_URL || import.meta.env.VITE_API_URL;
+      const response = await axios.post(`${API_URL}/api/analyze`, {
         board: stones,
         currentMove: moveData,
         currentPlayer

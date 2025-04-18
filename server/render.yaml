@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: weiqi0418-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DEEPSEEK_API_KEY
+        value: sk-a35cc92f8fc64fa1a113493507d515ad
+      - key: CORS_ORIGINS
+        value: https://weiqi0418.vercel.app
