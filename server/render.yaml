@@ -4,6 +4,8 @@ services:
     env: node
     buildCommand: npm install
     startCommand: npm start
+    repo: https://github.com/mmqm0/weiqi0418.git
+    branch: master
     envVars:
       - key: NODE_ENV
         value: production
